@@ -47,11 +47,13 @@
         <!-- Custom CSS defined by admin -->
         <link type="text/css" href="{{ asset('byadmin') }}/back.css" rel="stylesheet">
 
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500&display=swap" rel="stylesheet"> 
 
 
     </head>
-    <body class="{{ $class ?? '' }}">
+    <body class="{{ $class ?? '' }}" style="    font-family: 'Cairo', sans-serif;">
         @auth()
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
